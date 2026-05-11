@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+header {
+    background: #4a90e2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #4a90e2, #50c9c3);
+    color: white;
+}
+
+.hero button {
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 40px;
+}
+
+.course-card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: #ddd;
+    border-radius: 20px;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: green;
+    border-radius: 20px;
+}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Online Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>LearnHub</h1>
+    <nav>
+        <a href="#courses">Courses</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#progress">Progress</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome to LearnHub</h2>
+    <p>Learn Anytime, Anywhere</p>
+    <button onclick="showMessage()">Start Learning</button>
+</section>
+
+<section id="courses" class="container">
+    <h2>Video Lessons</h2>
+
+    <div class="course-card">
+        <h3>HTML Basics</h3>
+        <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="course-card">
+        <h3>CSS Styling</h3>
+        <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+<section id="quiz" class="container">
+    <h2>Quick Quiz</h2>
+    <p>What does HTML stand for?</p>
+
+    <button onclick="checkAnswer('a')">Hyper Text Markup Language</button>
+    <button onclick="checkAnswer('b')">Home Tool Markup Language</button>
+
+    <p id="result"></p>
+</section>
+
+<section id="progress" class="container">
+    <h2>Course Progress</h2>
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+    <button onclick="increaseProgress()">Complete Lesson</button>
+</section>
+
+<footer>
+    <p>© 2026 LearnHub Platform</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

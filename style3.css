@@ -1,0 +1,74 @@
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    transition: 0.3s;
+}
+
+header {
+    background: #0077ff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.toolbar button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#editor {
+    background: white;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.status {
+    margin-top: 15px;
+    color: green;
+}
+
+.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode #editor {
+    background: #2d2d2d;
+    color: white;
+}
+</style>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    transition: 0.3s;
+}
+
+header {
+    background: #0077ff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.toolbar button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#editor {
+    background: white;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.status {
+    margin-top: 15px;
+    color: green;
+}
+
+.dark-mode {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode #editor {
+    background: #2d2d2d;
+    color: white;
+}
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CollabDocs Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📄 CollabDocs</h1>
+        <button id="themeBtn">🌙 Mode</button>
+    </header>
+
+    <div class="container">
+        <h2>Real-Time Collaborative Document Editor</h2>
+
+        <div class="toolbar">
+            <button onclick="formatText('bold')"><b>B</b></button>
+            <button onclick="formatText('italic')"><i>I</i></button>
+            <button onclick="formatText('underline')"><u>U</u></button>
+            <button onclick="saveDocument()">💾 Save</button>
+        </div>
+
+        <div id="editor" contenteditable="true">
+            Start typing your document here...
+        </div>
+
+        <div class="info">
+            <p>Words: <span id="wordCount">0</span></p>
+            <p>Characters: <span id="charCount">0</span></p>
+        </div>
+
+        <div class="status">
+            <span id="typingStatus">No one is typing...</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

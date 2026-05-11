@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<style>*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+header{
+    background:#007bff;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 30px;
+}
+
+.hero{
+    text-align:center;
+    padding:40px;
+}
+
+.products{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+}
+
+button{
+    padding:10px;
+    border:none;
+    background:#28a745;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.cart{
+    text-align:center;
+    font-size:22px;
+    padding:20px;
+}</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopWave PWA</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header>
+    <h1>🛍 ShopWave</h1>
+    <button onclick="showNotification()">Offers</button>
+</header>
+
+<section class="hero">
+    <h2>Smart Shopping PWA</h2>
+    <p>Shop Online Even Offline!</p>
+</section>
+
+<section class="products">
+
+    <div class="card">
+        <img src="https://via.placeholder.com/200" alt="">
+        <h3>Smart Watch</h3>
+        <p>₹2999</p>
+        <button onclick="addToCart()">Add To Cart</button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/200" alt="">
+        <h3>Headphones</h3>
+        <p>₹199
